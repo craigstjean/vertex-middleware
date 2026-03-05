@@ -130,9 +130,15 @@ func (c *Client) StreamGenerateContent(ctx context.Context, model string, req Ge
 }
 
 func (c *Client) endpointURL(model, method string) string {
+	var host string
+	if c.keyConfig.Location == "global" {
+		host = "aiplatform.googleapis.com"
+	} else {
+		host = c.keyConfig.Location + "-aiplatform.googleapis.com"
+	}
 	return fmt.Sprintf(
-		"https://%s-aiplatform.googleapis.com/v1/projects/%s/locations/%s/publishers/google/models/%s:%s",
-		c.keyConfig.Location,
+		"https://%s/v1/projects/%s/locations/%s/publishers/google/models/%s:%s",
+		host,
 		c.keyConfig.ProjectID,
 		c.keyConfig.Location,
 		model,
