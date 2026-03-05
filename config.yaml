@@ -1,0 +1,17 @@
+server:
+  port: "8080"
+
+# Map each exposed API key to a set of Vertex AI credentials.
+# Add as many entries as you need — each can point to a different GCP project/region.
+api_keys:
+  "sk-my-secret-key-1":
+    credential_file: "credentials/project1-service-account.json"
+    project_id: "my-gcp-project-id"
+    location: "us-central1"
+    default_model: "gemini-1.5-pro-002"   # used when the caller omits the model field
+
+  # "sk-my-secret-key-2":
+  #   credential_file: "credentials/project2-service-account.json"
+  #   project_id: "another-gcp-project"
+  #   location: "europe-west4"
+  #   default_model: "gemini-2.0-flash-001"
