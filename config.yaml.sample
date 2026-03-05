@@ -7,7 +7,7 @@ api_keys:
   "sk-my-secret-key-1":
     credential_file: "credentials/project1-service-account.json"
     project_id: "my-gcp-project-id"
-    location: "us-central1"
+    location: "us-central1"  # use "global" for the newest preview models
     default_model: "gemini-1.5-pro-002"   # used when the caller omits the model field
 
   # "sk-my-secret-key-2":
