@@ -1,7 +1,7 @@
 package vertex
 
 import (
-	"vertexmiddleware/types"
+	"github.com/craigstjean/vertexmiddleware/types"
 )
 
 // ToVertexRequest converts an OpenAI ChatCompletionRequest to a Vertex GenerateContentRequest.

@@ -6,9 +6,9 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"vertexmiddleware/config"
-	"vertexmiddleware/handlers"
-	"vertexmiddleware/middleware"
+	"github.com/craigstjean/vertexmiddleware/config"
+	"github.com/craigstjean/vertexmiddleware/handlers"
+	"github.com/craigstjean/vertexmiddleware/middleware"
 )
 
 func main() {

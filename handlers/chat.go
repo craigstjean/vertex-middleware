@@ -10,10 +10,10 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"vertexmiddleware/config"
-	"vertexmiddleware/middleware"
-	"vertexmiddleware/types"
-	"vertexmiddleware/vertex"
+	"github.com/craigstjean/vertexmiddleware/config"
+	"github.com/craigstjean/vertexmiddleware/middleware"
+	"github.com/craigstjean/vertexmiddleware/types"
+	"github.com/craigstjean/vertexmiddleware/vertex"
 )
 
 // clientCache avoids re-initialising a Vertex client (and its token source) on every request.

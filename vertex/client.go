@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"golang.org/x/oauth2/google"
-	"vertexmiddleware/config"
+	"github.com/craigstjean/vertexmiddleware/config"
 )
 
 const cloudPlatformScope = "https://www.googleapis.com/auth/cloud-platform"

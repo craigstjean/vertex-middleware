@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"vertexmiddleware/types"
+	"github.com/craigstjean/vertexmiddleware/types"
 )
 
 var knownModels = []types.Model{

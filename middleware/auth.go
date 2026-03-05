@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"vertexmiddleware/config"
-	"vertexmiddleware/types"
+	"github.com/craigstjean/vertexmiddleware/config"
+	"github.com/craigstjean/vertexmiddleware/types"
 )
 
 // KeyConfigCtxKey is the context key under which the matched KeyConfig is stored.
