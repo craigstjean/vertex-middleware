@@ -1,6 +1,9 @@
 package main
 
 import (
+	"crypto/rand"
+	"encoding/hex"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -12,6 +15,15 @@ import (
 )
 
 func main() {
+	if len(os.Args) > 1 && os.Args[1] == "generate-key" {
+		key, err := generateKey()
+		if err != nil {
+			log.Fatalf("Failed to generate key: %v", err)
+		}
+		fmt.Println(key)
+		return
+	}
+
 	configPath := "config.yaml"
 	if len(os.Args) > 1 {
 		configPath = os.Args[1]
@@ -40,4 +52,13 @@ func main() {
 	if err := r.Run(":" + cfg.Server.Port); err != nil {
 		log.Fatalf("Server error: %v", err)
 	}
+}
+
+// generateKey returns a cryptographically random API key in the form "sk-<32 hex bytes>".
+func generateKey() (string, error) {
+	b := make([]byte, 32)
+	if _, err := rand.Read(b); err != nil {
+		return "", err
+	}
+	return "sk-" + hex.EncodeToString(b), nil
 }
