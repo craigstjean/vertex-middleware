@@ -205,4 +205,4 @@ tags
 # End of https://www.toptal.com/developers/gitignore/api/vim,emacs,goland+all,visualstudiocode,go
 
 credentials/
-
+config.yaml
