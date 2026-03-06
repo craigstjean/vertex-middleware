@@ -10,10 +10,10 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/craigstjean/vertexmiddleware/config"
-	"github.com/craigstjean/vertexmiddleware/middleware"
-	"github.com/craigstjean/vertexmiddleware/types"
-	"github.com/craigstjean/vertexmiddleware/vertex"
+	"github.com/craigstjean/vertex-middleware/config"
+	"github.com/craigstjean/vertex-middleware/middleware"
+	"github.com/craigstjean/vertex-middleware/types"
+	"github.com/craigstjean/vertex-middleware/vertex"
 )
 
 // clientCache avoids re-initialising a Vertex client (and its token source) on every request.
@@ -60,7 +60,7 @@ func ChatCompletions(cfg *config.Config) gin.HandlerFunc {
 			model = keyConfig.DefaultModel
 		}
 		if model == "" {
-			model = "gemini-1.5-pro-002"
+			model = "gemini-2.5-flash"
 		}
 
 		vertexReq := vertex.ToVertexRequest(req)

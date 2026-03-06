@@ -44,7 +44,7 @@ api_keys:
     credential_file: "credentials/my-project.json"
     project_id: "my-gcp-project-id"
     location: "us-central1"       # or "global" for the global endpoint
-    default_model: "gemini-2.0-flash-001"
+    default_model: "gemini-2.5-flash"
 ```
 
 Each entry under `api_keys` is an independent API key that clients will use. You can have as many as you need, each pointing to a different GCP project, region, or credential file.
@@ -98,7 +98,7 @@ Follows the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-r
 **Request:**
 ```json
 {
-  "model": "gemini-2.0-flash-001",
+  "model": "gemini-2.5-flash",
   "messages": [
     { "role": "system", "content": "You are a helpful assistant." },
     { "role": "user",   "content": "Hello!" }
@@ -117,7 +117,7 @@ If `model` is omitted, the `default_model` from the matching key's config is use
   "id": "chatcmpl-...",
   "object": "chat.completion",
   "created": 1234567890,
-  "model": "gemini-2.0-flash-001",
+  "model": "gemini-2.5-flash",
   "choices": [
     {
       "index": 0,
@@ -151,7 +151,7 @@ curl -s -X POST http://localhost:8080/v1/chat/completions \
   -H "Authorization: Bearer sk-your-key" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "gemini-2.0-flash-001",
+    "model": "gemini-2.5-flash",
     "messages": [{"role": "user", "content": "Say hello"}]
   }'
 
@@ -160,7 +160,7 @@ curl -s -X POST http://localhost:8080/v1/chat/completions \
   -H "Authorization: Bearer sk-your-key" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "gemini-2.0-flash-001",
+    "model": "gemini-2.5-flash",
     "messages": [{"role": "user", "content": "Say hello"}],
     "stream": true
   }'

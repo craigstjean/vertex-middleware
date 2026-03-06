@@ -8,10 +8,10 @@ api_keys:
     credential_file: "credentials/project1-service-account.json"
     project_id: "my-gcp-project-id"
     location: "us-central1"  # use "global" for the newest preview models
-    default_model: "gemini-1.5-pro-002"   # used when the caller omits the model field
+    default_model: "gemini-2.5-flash"   # used when the caller omits the model field
 
   # "sk-my-secret-key-2":
   #   credential_file: "credentials/project2-service-account.json"
   #   project_id: "another-gcp-project"
   #   location: "europe-west4"
-  #   default_model: "gemini-2.0-flash-001"
+  #   default_model: "gemini-2.5-pro"

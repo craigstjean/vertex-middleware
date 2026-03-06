@@ -9,9 +9,9 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/craigstjean/vertexmiddleware/config"
-	"github.com/craigstjean/vertexmiddleware/handlers"
-	"github.com/craigstjean/vertexmiddleware/middleware"
+	"github.com/craigstjean/vertex-middleware/config"
+	"github.com/craigstjean/vertex-middleware/handlers"
+	"github.com/craigstjean/vertex-middleware/middleware"
 )
 
 func main() {

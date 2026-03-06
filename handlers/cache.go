@@ -3,8 +3,8 @@ package handlers
 import (
 	"sync"
 
-	"github.com/craigstjean/vertexmiddleware/config"
-	"github.com/craigstjean/vertexmiddleware/vertex"
+	"github.com/craigstjean/vertex-middleware/config"
+	"github.com/craigstjean/vertex-middleware/vertex"
 )
 
 // safeClientCache caches Vertex clients keyed by credential file path,

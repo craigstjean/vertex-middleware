@@ -1,4 +1,4 @@
-module github.com/craigstjean/vertexmiddleware
+module github.com/craigstjean/vertex-middleware
 
 go 1.21
 
